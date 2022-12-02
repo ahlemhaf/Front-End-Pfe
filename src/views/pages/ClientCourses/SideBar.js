@@ -2,11 +2,8 @@ import React from 'react'
 
 function SideBar() {
     return (
-        <nav class="nav flex-column">
-            <a class="nav-link active" aria-current="page" href="#">Active</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link" href="#">Link</a>
-            <a class="nav-link disabled">Disabled</a>
+        <nav className="nav flex-column  bg-dark" style={{height:'450px',width:'150px' , overflowX:true}}>
+            <button className="btn text-white rounded-0" >Link</button>
         </nav>
     )
 }

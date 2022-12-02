@@ -66,6 +66,7 @@ const UpdateClient= React.lazy(()=> import('./views/pages/Client/UpdateClient'))
 const AddCourse= React.lazy(()=> import('./views/pages/Courses/AddCourse'))
 const UpdateCourse= React.lazy(()=> import('./views/pages/Courses/UpdateCourse'))
 const ViewCourse= React.lazy(()=> import('./views/pages/Courses/ViewCourse'))
+const ClientCourse= React.lazy(()=> import('./views/pages/ClientCourses/ClientCourses'))
 
 const routes = [
   { path: '/', exact: true, name: 'Home' },
@@ -73,6 +74,7 @@ const routes = [
   { path: '/theme', name: 'Theme', element: Colors, exact: true },
 
   { path: '/home', name: 'Home', element: Home, exact: true },
+  { path: '/client-course', name: 'Client course', element: ClientCourse, exact: true },
   { path: '/courses', name: 'Courses', element: Courses, exact: true },
   { path: '/about', name: 'About Us', element: About, exact: true },
   { path: '/team', name: 'Team', element: Team, exact: true },
