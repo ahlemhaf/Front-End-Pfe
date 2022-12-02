@@ -22,15 +22,15 @@ const Contact = () => {
             <div className='items grid2'>
               <div className='box'>
                 <h4>ADDRESS:</h4>
-                <p>198 West 21th Street, Suite 721 New York NY 10016</p>
+                <p>198 West 21th Street, Suite 721 Tunisia 10016</p>
               </div>
               <div className='box'>
                 <h4>EMAIL:</h4>
-                <p> info@yoursite.com</p>
+                <p> academia@yoursite.com</p>
               </div>
               <div className='box'>
                 <h4>PHONE:</h4>
-                <p> + 1235 2355 98</p>
+                <p> +216 7100001</p>
               </div>
             </div>
 
@@ -46,8 +46,8 @@ const Contact = () => {
               <button className='primary-btn'>SEND MESSAGE</button>
             </form>
 
-            <h3>Follow us here</h3>
-            <span>FACEBOOK TWITTER INSTAGRAM DRIBBBLE</span>
+            {/* <h3>Follow us here</h3>
+            <span>FACEBOOK TWITTER INSTAGRAM DRIBBBLE</span> */}
           </div>
         </div>
       </section>
