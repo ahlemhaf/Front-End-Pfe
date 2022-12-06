@@ -3,7 +3,7 @@ import SideBar from './SideBar'
 
 function ClientCourses() {
   return (
-    <div className='d-flex'>
+    <div className='d-flex vh-100'>
         <SideBar />
     </div>
   )

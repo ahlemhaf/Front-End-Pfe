@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import axios from 'axios'
 import { useParams } from 'react-router-dom'
 import ReactPlayer from 'react-player'
+import GetApi from 'src/views/services/CourseService';
 
 function ViewCourse() {
   const params = useParams()
@@ -13,7 +13,7 @@ function ViewCourse() {
 
   useEffect(()=>{
     const fetchdata = async () => {
-        const data = await axios.get(`http://localhost:4000/course/${params.id}`)
+        const data = await GetApi.getCourseById(params.id)
         setCourse(data.data)
       }
       fetchdata()

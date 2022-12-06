@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import '../AuthCss/Auth.css'
 import { toast } from 'react-toastify';
 function Register() {
@@ -26,13 +26,8 @@ function Register() {
     e.preventDefault()
     try {
       const users = await axios.post('http://localhost:4000/register', register);
-    
-        console.log(users)
-        if (users.status===201) {
-          toast.success(users.data.message)
-          navigate('/login')
-        }else if(users.status===400) 
-        {toast.error((users.data.message))}
+      toast.success(users.data.message)
+      navigate('/login')
     } catch (err) {
       toast.error(err.response.data.message)
 
@@ -89,25 +84,26 @@ function Register() {
 
           </div>
 
-          <div className="form-outline mb-2">
+          {/* <div className="form-outline mb-2">
             <label className="text">Genre</label>
             <input type="text" onChange={handleChange}
               id="genre" className="form-control" placeholder="Homme ou femme" />
-             </div>
+          </div> */}
 
-            {/* <select className="form-select form-select-lg mb-3 " onChange={handleChange}
+          {/* <select className="form-select form-select-lg mb-3 " onChange={handleChange}
               id="genre" placeholder="genre"  >
          
               <option value="Homme">Homme</option>
               <option value="Femme">Femme</option>
             </select> */}
-         
+
           <div className="d-grid gap-2 col-6 mx-auto">
             <button onClick={handleSubmit} className="btn btn-primary" type="button">Sign up</button>
           </div>
 
           <div className="text-center">
-            <p className="text" >or sign up with:</p>
+            <p className="text" >or sign in <Link to='/login' >here</Link>  </p>
+            {/* <p className="text" >or sign up with:</p>
             <button type="button" className="btn btn-primary btn-floating mx-1">
               <i className="fab fa-facebook-f"></i>
             </button>
@@ -122,7 +118,7 @@ function Register() {
 
             <button type="button" className="btn btn-primary btn-floating mx-1">
               <i className="fab fa-github"></i>
-            </button>
+            </button> */}
           </div>
         </form>
         <div className='col section-register m-2'>

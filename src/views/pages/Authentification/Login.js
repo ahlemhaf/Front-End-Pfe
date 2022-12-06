@@ -66,7 +66,8 @@ const handleSubmit = async(e) => {
     </div>
 
     <div className="text-center">
-      <p className="text" >or log in with:</p>
+    <p className="text" >or sign up <Link to='/register' >here</Link>  </p>
+      {/* <p className="text" >or log in with:</p>
       <button type="button" className="btn btn-primary btn-floating mx-1">
         <i className="fab fa-facebook-f"></i>
       </button>
@@ -81,7 +82,7 @@ const handleSubmit = async(e) => {
 
       <button type="button" className="btn btn-primary btn-floating mx-1">
         <i className="fab fa-github"></i>
-      </button>
+      </button> */}
     </div>
   </form>
   
